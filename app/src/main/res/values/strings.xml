@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">tuan03_ltdd</string>
+    <string name="Nguyen_ham_tich_phan_va_ung_dung">Nguyên hàm tích phân và ứng dụng</string>
+    <string name="Cung_cap_boi_Tiki_Trading">Cung cấp bởi Tiki Trading</string>
+    <string name="_141_800_vnd">141.800 đ</string>
 </resources>

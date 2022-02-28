@@ -6,21 +6,157 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/book"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
         android:src="@drawable/book"
-        app:layout_constraintRight_toRightOf="parent"
+
+
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/quantity_product"
+
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="14dp"
         />
 
+    <TextView
+        android:id="@+id/bookName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Nguyen_ham_tich_phan_va_ung_dung"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+
+        app:layout_constraintLeft_toRightOf="@+id/book"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="25dp"
+        />
+    <TextView
+        android:id="@+id/manufacture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Cung_cap_boi_Tiki_Trading"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="12sp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/book"
+
+        android:layout_marginTop="42dp"
+        android:layout_marginLeft="25dp"
+        />
+    <TextView
+        android:id="@+id/priceSale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_141_800_vnd"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/red"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/book"
+
+        android:layout_marginTop="67dp"
+        android:layout_marginLeft="25dp"
+        />
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_141_800_vnd"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="@color/grey"
+        android:background="@drawable/striking_text"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/book"
+
+        android:layout_marginTop="99dp"
+        android:layout_marginLeft="25dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/quantity_product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintLeft_toRightOf="@+id/book"
+
+        app:layout_constraintTop_toBottomOf="@+id/price"
+
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="124dp"
+        >
+
+
+        <ImageButton
+            android:id="@+id/btnSub"
+            android:layout_width="24dp"
+            android:layout_height="28dp"
+            android:src="@drawable/minus"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+
+
+            android:textColor="@color/black"
+            android:layout_marginRight="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"/>
+        <ImageButton
+            android:id="@+id/btnAdd"
+            android:layout_width="24dp"
+            android:layout_height="28dp"
+            android:src="@drawable/addition"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/label_maGiamGia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Mã giảm giá đã lưu"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+
+        app:layout_constraintTop_toBottomOf="@+id/book"
+        app:layout_constraintStart_toStartOf="parent"
+
+        android:layout_marginTop="21dp"
+        android:layout_marginLeft="12dp"
+
+        />
+    <TextView
+        android:id="@+id/label_xemTaiDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Xem tại đây"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+
+        app:layout_constraintTop_toBottomOf="@+id/quantity_product"
+        app:layout_constraintStart_toStartOf="parent"
+
+        android:layout_marginTop="22dp"
+        android:layout_marginLeft="136dp"
+
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
